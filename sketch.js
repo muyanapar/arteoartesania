@@ -41,7 +41,7 @@ function setup(){
     // Botón de reinicio
     button_3.position(w/6,0);
     button_3.style("background","url('imag/Gracias-01.png')")
-    button_3.style("padding","1024px 512px")
+    button_3.style("padding","512px 512px")
     button_3.style("display","inline-block")
     button_3.style("border", "none")
     button_3.style("display", "none")
