@@ -24,18 +24,26 @@ function preload(){
 function setup(){
     createCanvas(w, h)
     button = createButton(' ');
-    button.position(w/6,512);
+    button.position(w/3,512);
     button.style("background","url('imag/Botones-01.png')")
     button.style("padding","14px 65px")
     button.style("display","inline-block")
     button.style("border", "none")
 
     button_2 = createButton(' ');
-    button_2.position(w/6 + w/2,512);
+    button_2.position(w/3 + 270,512);
     button_2.style("background","url('imag/Botones-02.png')")
     button_2.style("padding","14px 65px")
     button_2.style("display","inline-block")
     button_2.style("border", "none")
+
+    button_3 = createButton(' ');
+    button_3.position(w/6 + w/2,512);
+    button_3.style("background","url('imag/Botones-02.png')")
+    button_3.style("padding","14px 65px")
+    button_3.style("display","inline-block")
+    button_3.style("border", "none")
+    button_3.style("display", "none")
 }
 function draw(){
     background(bg)
@@ -44,8 +52,8 @@ function draw(){
         clear()
         button.style("display","none")
         button_2.style("display","none")
-        image(bg, w/4,0,h,w)
-        image(gracias, w/4,0);
+        image(bg, w/5,0,h,w)
+        image(gracias, w/5,0);
     }
     button.mousePressed(arte);
     button.mouseReleased(arte_sig)
