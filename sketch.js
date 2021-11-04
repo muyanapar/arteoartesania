@@ -38,13 +38,15 @@ function setup(){
     button_2.style("border", "none")
 
     button_3 = createButton(' ');
-    button_3.position(w/6 + w/2,512);
-    button_3.style("background","url('imag/Botones-02.png')")
-    button_3.style("padding","14px 65px")
+    // Botón de reinicio
+    button_3.position(w/6,0);
+    button_3.style("background","url('imag/Gracias-01.png')")
+    button_3.style("padding","1024px 512px")
     button_3.style("display","inline-block")
     button_3.style("border", "none")
     button_3.style("display", "none")
 }
+
 function draw(){
     background(bg)
     image(girafas[ite], w/3,50,412,412)
@@ -52,13 +54,22 @@ function draw(){
         clear()
         button.style("display","none")
         button_2.style("display","none")
+        button_3.style("display","block")
         image(bg, w/5,0,h,w)
-        image(gracias, w/5,0);
     }
     button.mousePressed(arte);
     button.mouseReleased(arte_sig)
     button_2.mousePressed(artesania);
     button_2.mouseReleased(artesania_sig);
+    button_3.mousePressed(resetSketch);
+}
+
+function resetSketch(){
+    ite=1;
+    juego_finalizado = 0;
+    button.style("display","block")
+    button_2.style("display","block")
+    button_3.style("display","none")
 }
 
 function arte(){
@@ -98,6 +109,5 @@ function siguiente_imagen(){
         json.artesanias = artesanias;
         // saveJSON(json, 'informe.json');
     }
-    
     redraw()
 }
