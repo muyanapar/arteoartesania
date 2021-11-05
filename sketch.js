@@ -17,10 +17,11 @@ function preload(){
     bg = loadImage('imag/bg_resize.jpg')
     gracias = loadImage('imag/Gracias-01.png')
 
-    for (let i=1; i<34; i++){
+    for (let i=1; i<35; i++){
         girafas[i] = loadImage('imag/obra' + str(i) + '.png')
     }
 }
+
 function setup(){
     createCanvas(w, h)
     button = createButton(' ');
@@ -97,7 +98,7 @@ function artesania_sig(){
 }
 
 function siguiente_imagen(){
-    if (ite < 33){
+    if (ite < 34){
         console.log(ite)
         ite++
     }
